@@ -1,0 +1,203 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Grégoire Szymanski</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", () => {
+				function applyCustomStylingToList(listId) {
+					const list = document.getElementById(listId);
+
+					if (list) { // Check if the list exists
+						const listItemCount = list.children.length + 1; // Count the number of list items
+
+						// Create a style element to update the CSS dynamically
+						const style = document.createElement("style");
+						style.textContent = `
+							#${listId} {
+								list-style-type: none; /* Remove default numbering */
+								counter-reset: custom-counter ${listItemCount}; /* Set counter to the number of list items */
+							}
+
+							#${listId} li {
+								counter-increment: custom-counter -1; /* Decrement the counter for each item */
+								position: relative; /* Position adjustment for pseudo-element */
+								padding-left: 2em; /* Add padding to align with the start of the content */
+								text-indent: 0em; /* Align the first line to the left */
+							}
+
+							#${listId} li::before {
+								content: "[" counter(custom-counter) "] "; /* Add custom numbering */
+								font-weight: bold; /* Optional: Make the numbers bold */
+								color: #333; /* Optional: Set the color of the numbers */
+
+								position: absolute; /* Ensure the number stays in place */
+								left: 0; /* Align the pseudo-element to the left */
+								text-align: right; /* Align the numbers to the right within the reserved space */
+							}
+						`;
+
+						// Append the style element to the document head
+						document.head.appendChild(style);
+					} else {
+						console.warn(`The list with id '${listId}' is not present on the page.`);
+					}
+				}
+
+				// Example usage
+				applyCustomStylingToList("papers");
+				applyCustomStylingToList("unpublished");
+			});
+		</script>
+	</head>
+
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<h1>Grégoire Szymanski</h1>
+						<span class="logo"><img src="images/logo.png" alt="" /></span>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="./index.html">Home</a></li>
+							<li><a href="./CV.html">CV</a></li>
+							<li><a href="./research.html" class="active">Research</a></li>
+							<li><a href="./agenda.html">Scientific Agenda</a></li>
+							<li><a href="./teaching.html">Teaching</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+
+					<div id="main">
+
+						<section id="intro" class="main">
+							<div class="first">
+								<header class="major">
+									<h2>Publications</h2>
+								</header>
+	
+								<div class="content">
+									<ol id="papers">
+										<li>
+											<strong>Mean-Field Limits for Nearly Unstable Hawkes Processes.</strong> 
+											<em>Submitted for publication.</em> 2024. 
+											G. Szymanski and W. Xu. 
+											<a href="https://arxiv.org/abs/2412.07461" target="_blank">[Arxiv]</a>
+										</li>
+										<li>
+											<strong>A theory of passive market impact.</strong> 
+											<em>Submitted for publication.</em> 2024. 
+											Y. Ouazzani Chahdi, M. Rosenbaum, and G. Szymanski. 
+											<a href="https://arxiv.org/abs/2412.07461" target="_blank">[Arxiv]</a>
+										</li>
+										<li>
+											<strong>Estimation of the invariant measure of a multidimensional diffusion from noisy observations.</strong> 
+											<em>Submitted for publication.</em> 2024. 
+											R. Maillet and G. Szymanski. 
+											<a href="https://arxiv.org/abs/2404.12181" target="_blank">[Arxiv]</a>
+										</li>
+										<li>
+											<strong>Asymptotic Efficiency for Fractional Brownian Motion with general noise.</strong> 
+											<em>Submitted for publication.</em> 2023. 
+											G. Szymanski and T. Takabatake. 
+											<a href="https://arxiv.org/abs/2311.18669" target="_blank">[Arxiv]</a>
+										</li>
+										<li>
+											<strong>The two square root laws of market impact and the role of sophisticated market participants.</strong> 
+											<em>Submitted for publication.</em> 2023. 
+											B. Durin, M. Rosenbaum, and G. Szymanski. 
+											<a href="https://arxiv.org/abs/2311.18283" target="_blank">[Arxiv]</a>
+										</li>
+										<li>
+											<strong>Statistical inference for rough volatility: Central limit theorems.</strong> 
+											<em>The Annals of Applied Probability.</em> 2023. 
+											C. Chong, M. Hoffmann, Y. Liu, M. Rosenbaum, and G. Szymanski. 
+											<a href="https://arxiv.org/abs/2210.01216" target="_blank">[Arxiv]</a>
+										</li>
+										<li>
+											<strong>Statistical inference for rough volatility: Minimax theory.</strong> 
+											<em>The Annals of Statistics.</em> 52, 1277–1306, 2023. 
+											C. Chong, M. Hoffmann, Y. Liu, M. Rosenbaum, and G. Szymanski. 
+											<a href="https://arxiv.org/abs/2210.01214" target="_blank">[Arxiv]</a>
+										</li>
+										<li>
+											<strong>Optimal estimation of the rough Hurst parameter in additive noise.</strong> 
+											<em>Stochastic Processes and their Applications.</em> 2024. 
+											G. Szymanski. 
+											<a href="https://arxiv.org/abs/2205.13035" target="_blank">[Arxiv]</a>
+										</li>
+									</ol>
+								</div>
+
+							</div>
+						</section>
+
+						
+
+
+						<section id="first" class="main">
+							<div class="first">
+								<header class="major">
+									<h2>Unpublished supervised written work</h2>
+								</header>
+	
+								<div class="content">
+									<ol id="unpublished">
+										<li>
+											<strong>Statistical Modeling for Financial Applications: Rough Volatility, Market Impact, and Hawkes Processes.</strong> 
+											<em>PhD thesis supervised by M. Hoffmann and M. Rosenbaum.</em> 2024. 
+											<!-- <a href="https://arxiv.org/abs/2205.13035" target="_blank">[Arxiv]</a> -->
+										</li>
+										<li>
+											<strong>Fondements microstructurels de la volatilité</strong> 
+											<em>ENS Diploma thesis.</em> 2021. 
+											<!-- <a href="https://arxiv.org/abs/2205.13035" target="_blank">[Arxiv]</a> -->
+										</li>
+										<li>
+											<strong>Percolation critique sur le demi-espace</strong> 
+											<em>Bachelor's thesis, supervised by R. Cerf, in collaboration with R. Panis.</em> 2021. 
+											<!-- <a href="https://arxiv.org/abs/2205.13035" target="_blank">[Arxiv]</a> -->
+										</li>
+									</ol>
+								</div>
+							</div>
+						</section>
+
+
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Grégoire Szymanski. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,1 +1,0 @@
-# gregoire-szymanski.github.io

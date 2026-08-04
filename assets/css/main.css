@@ -2808,6 +2808,17 @@ input, select, textarea {
 }
 
 
+	/* Award note */
+.award {
+    display: block; /* Sit on its own line under the publication */
+    margin: 0.35em 0 0.85em 0; /* Sit closer to its own entry than to the next one */
+    padding: 0.15em 0 0.15em 0.75em;
+    border-left: solid 2px #c79cc8; /* Accent from the header underline gradient */
+    font-size: 0.9em;
+    color: #7f7f7f;
+}
+
+
 /* Features */
 
 	.features {

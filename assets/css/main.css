@@ -2819,6 +2819,70 @@ input, select, textarea {
 }
 
 
+	/* BibTeX popup */
+#bibtex-dialog {
+    width: calc(100% - 32px);
+    max-width: 44em;
+    max-height: calc(100% - 32px);
+    padding: 0; /* Padding sits on the inner box so backdrop clicks are easy to detect */
+    border: 0;
+    border-radius: 0.25em; /* Same rounding as the main panel */
+    background-color: #ffffff;
+    color: #636363;
+    box-shadow: 0 1em 3em rgba(0, 0, 0, 0.25);
+}
+
+#bibtex-dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+.bibtex-dialog-inner {
+    padding: 1.5em 1.75em;
+}
+
+#bibtex-dialog h3 {
+    margin: 0;
+}
+
+.bibtex-dialog-paper {
+    margin: 0.25em 0 1em 0;
+    font-size: 0.9em;
+    color: #7f7f7f;
+}
+
+#bibtex-dialog pre {
+    margin: 0 0 1.25em 0;
+    font-size: max(0.75em, 13px);
+}
+
+#bibtex-dialog pre code {
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.6;
+    padding: 1em 1.25em;
+    max-height: 55vh;
+    overflow-y: auto;
+    white-space: pre-wrap; /* Wrap long titles instead of scrolling sideways */
+    overflow-wrap: anywhere;
+}
+
+.bibtex-dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75em;
+}
+
+html:has(#bibtex-dialog[open]) {
+    overflow: hidden; /* Keep the page from scrolling behind the popup */
+}
+
+@media screen and (max-width: 480px) {
+    .bibtex-dialog-inner {
+        padding: 1.25em 1em;
+    }
+}
+
+
 /* Features */
 
 	.features {
